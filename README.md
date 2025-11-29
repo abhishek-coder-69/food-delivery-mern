@@ -27,3 +27,17 @@ Protected routes for secure access
 MongoDB database with Mongoose ODM
 CORS enabled for cross-origin requests
 Password encryption with bcrypt
+
+
+
+food-delivery-mern/
+├── backend/          # Node.js + Express API
+│   ├── models/       # Database schemas
+│   ├── controllers/  # Business logic
+│   ├── routes/       # API endpoints
+│   └── middleware/   # Authentication
+└── frontend/         # React application
+    ├── components/   # Reusable UI components
+    ├── pages/        # Main pages
+    ├── context/      # State management
+    └── services/     # API calls

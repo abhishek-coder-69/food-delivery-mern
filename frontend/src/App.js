@@ -8,6 +8,11 @@ import Login from './pages/Login';
 import Register from './pages/Register';
 import Restaurants from './pages/Restaurants';
 import Orders from './pages/Orders';
+import AdminDashboard from './pages/AdminDashboard';
+import AddRestaurant from './pages/AddRestaurant';
+import ManageRestaurants from './pages/ManageRestaurants';
+import AdminOrders from './pages/AdminOrders';
+import AdminUsers from './pages/AdminUsers';
 import './App.css';
 
 function App() {
@@ -24,6 +29,13 @@ function App() {
                 <Route path="/register" element={<Register />} />
                 <Route path="/restaurants" element={<Restaurants />} />
                 <Route path="/orders" element={<Orders />} />
+                
+                {/* Admin Routes */}
+                <Route path="/admin" element={<AdminDashboard />} />
+                <Route path="/admin/add-restaurant" element={<AddRestaurant />} />
+                <Route path="/admin/restaurants" element={<ManageRestaurants />} />
+                <Route path="/admin/orders" element={<AdminOrders />} />
+                <Route path="/admin/users" element={<AdminUsers />} />
               </Routes>
             </div>
           </div>

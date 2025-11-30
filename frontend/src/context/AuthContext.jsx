@@ -47,8 +47,13 @@ export const AuthProvider = ({ children }) => {
     setUser(null);
   };
 
+  // Check if user is admin - NEW
+  const isAdmin = () => {
+    return user?.role === 'admin';
+  };
+
   return (
-    <AuthContext.Provider value={{ user, token, login, register, logout }}>
+    <AuthContext.Provider value={{ user, token, login, register, logout, isAdmin }}>
       {children}
     </AuthContext.Provider>
   );

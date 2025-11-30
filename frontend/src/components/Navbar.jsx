@@ -4,7 +4,7 @@ import { AuthContext } from '../context/AuthContext';
 import { CartContext } from '../context/CartContext';
 
 const Navbar = () => {
-  const { user, logout } = useContext(AuthContext);
+  const { user, logout, isAdmin } = useContext(AuthContext);
   const { cart } = useContext(CartContext);
   const navigate = useNavigate();
 
@@ -30,6 +30,11 @@ const Navbar = () => {
           
           {user ? (
             <>
+              {isAdmin() && (
+                <li className="nav-item">
+                  <Link to="/admin" className="nav-link admin-link">⚙️ Admin</Link>
+                </li>
+              )}
               <li className="nav-item">
                 <Link to="/orders" className="nav-link">Orders</Link>
               </li>
